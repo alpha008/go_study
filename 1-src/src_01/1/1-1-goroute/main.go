@@ -2,7 +2,11 @@ package main
 
 import(
 	"time"
+	"fmt"
 )
+func test_goroute(a int) {
+	fmt.Println(a)
+}
 
 func main() {
 
