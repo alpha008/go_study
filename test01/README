@@ -1,0 +1,28 @@
+
+使用自己本地的包
+使用方法
+1.新建工程目录文件，然后切换到工程文件中
+执行
+go mod init module_name
+2.然后在工程下创建新的包
+----route
+package route
+func Add(a int, b int) int {
+	return a + b
+}
+如上所述
+3.然后在自己的主函数文件中使用如下方法导入新的包
+import (
+	"moudle/route"
+	"fmt"
+)
+func main() {
+	sum := route.Add(100, 300)
+	sub := route.Sub(100, 300)
+
+module_name.func调用函数
+
+
+
+
+

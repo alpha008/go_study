@@ -1,4 +1,4 @@
-package calc
+package route
 
 func Calc(a int, b int)(int,int) {
     sum := a + b
