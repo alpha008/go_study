@@ -7,9 +7,7 @@ import(
 func test_goroute(a int) {
 	fmt.Println(a)
 }
-
 func loop() {
-
 	for i := 0; i < 100; i++ {
 		go test_goroute(i)
 	}
