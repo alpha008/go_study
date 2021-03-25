@@ -31,5 +31,5 @@ func main() {
 	// x, y := <-c, <-c // receive from c
 	x := <-c
 	y := <-c
-	fmt.Println(x, y, x+y)
+	fmt.Println(x, y, x+y)  // chanel 是线程安全的，先入先出  协程安全的，内部含有锁
 }

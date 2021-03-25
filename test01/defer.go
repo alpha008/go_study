@@ -15,7 +15,8 @@ func test(a, b int) int {
 
 	return result(a, b)
 }
-
+// 函数存在多个返回值时，使用_取返回值，占位使用，可以不使用
+// 定义越靠前 打印越在最后 defer
 func main() {
 	fmt.Println(result(100, 200))
 

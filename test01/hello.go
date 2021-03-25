@@ -14,10 +14,10 @@ func loop() {
 	time.Sleep(time.Second)
 }
 func time_test() {
-	 fmt.Println("hello go")
-	//go fmt.Println("hello 零声学院") // 在函数内使用前缀go不会执行？？？
-	fmt.Println("hello 零声学院") // 在函数内使用前缀go不会执行？？？
-	//time.Sleep(time.Second)
+	go fmt.Println("hello go")
+	go fmt.Println("hello 零声学院") 
+	go fmt.Println("hello 零声学院") // 线程还没来得及执行就要退出了
+	time.Sleep(time.Second)
 }
 func main() {
 	loop()

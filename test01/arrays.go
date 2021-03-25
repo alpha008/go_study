@@ -4,7 +4,7 @@ import "fmt"
 
 func fab(n int) {
 	var a []uint64
-	a = make([]uint64, n)
+	a = make([]uint64, n) // 申请连续空间存放uint64个元素的空间
 
 	a[0] = 1
 	a[1] = 1
@@ -45,6 +45,6 @@ func testArray2() {
 
 func main() {
 	//testArray()
-	testArray2()
+	//testArray2()
 	fab(10)
 }
