@@ -51,9 +51,12 @@ func main() {
 	stu1.Age = 34
 	skill = stu1
 	skill.Running() //调用接口
-
+//接口变量指向一个结构体，然后去调用接口内的函数
+//接口内的函数在单独实现，这样就可以调用接口了
 	var teacher Teacher = Teacher{"柚子老师", 18}
 	skill = teacher
 	skill.Running() //调用接口
 	teacher.Running()
 }
+//一种是接口调用
+//一种是结构体.函数调用
