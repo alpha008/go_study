@@ -19,7 +19,7 @@ type Student struct {
 	high  int8   // 8
 	score int64  // 8
 }
-
+// 反射根据变量去反推变量的类型
 func main() {
 	var stu1 = new(Student)
 	stu1.Name = "零声学院，一切只为你"
@@ -35,7 +35,7 @@ func main() {
 	n := typ.NumField()
 	for i := 0; i < n; i++ {
 		field := typ.Field(i) // 反射出filed
-		fmt.Printf("%s at offset %v, size=%d, align=%d\n",
+		fmt.Printf("field_nameis :%s at offset %v, size=%d, align=%d\n",
 			field.Name, field.Offset, field.Type.Size(),
 			field.Type.Align())
 	}

@@ -10,6 +10,7 @@ import (
 func main() {
 	ch := make(chan float32, 4)
 	for i := 0; i < cap(ch); i++ {
+		fmt.Println("i :",i);
 		ch <- 1.0 // 写通道
 	}
 	for len(ch) > 0 {

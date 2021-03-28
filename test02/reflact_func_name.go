@@ -16,10 +16,10 @@ type Student struct {
 }
 
 func (self Student) runing() {
-	fmt.Printf("%s is running\n", self.Name)
+	fmt.Printf("func_name  %s is running\n", self.Name)
 }
 func (self Student) reading() {
-	fmt.Printf("%s is reading\n", self.Name)
+	fmt.Printf("func_name  %s is reading\n", self.Name)
 }
 func main() {
 	stu1 := Student{Name: "darren", Age: 34}
@@ -36,6 +36,7 @@ func main() {
 	fmt.Println("\n类型inf_type:", inf_type)
 	fmt.Println(inf_type.NumMethod())                        //2
 	fmt.Println(inf_type.Method(0), inf_type.Method(0).Name) // {reading main func() <invalid Value> 0} reading
-	fmt.Println(inf_type.MethodByName("reading"))            //{reading main func() <invalid Value> 0} true
-
+	//fmt.Println(inf_type.MethodByName("reading"))            //{reading main func() <invalid Value> 0} true
+	fmt.Println(inf_type.Method(1), inf_type.Method(1).Name) // {reading main func() <invalid Value> 0} reading
+	//fmt.Println(inf_type.MethodByName("reading"))  
 }

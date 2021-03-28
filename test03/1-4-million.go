@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-const N = 1000000
+const N = 100000
 
 func main() {
 	fmt.Println("run in main goroutine")

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"reflect"
 )
-
+// 反射的是根据值，反推值的类型
 func main() {
 	var s int = 42
 	fmt.Println(reflect.TypeOf(s))

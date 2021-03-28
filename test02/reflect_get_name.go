@@ -37,7 +37,7 @@ func main() {
 	val := reflect.ValueOf(stu1)         //获取Value类型，也可以使用reflect.ValueOf(&stu1).Elem()
 	val.MethodByName("String").Call(nil) //调用String方法
 
-	params := make([]reflect.Value, 1)
+	params := make([]reflect.Value, 1)  // 创建一个反射类型的channel
 	params[0] = reflect.ValueOf(18)
 	val.MethodByName("SetAge").Call(params) //通过名称调用方法
 

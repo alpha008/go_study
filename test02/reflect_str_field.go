@@ -17,12 +17,16 @@ func SetRectAttr(r *Rect, name string, value int) {
 	var field = v.Elem().FieldByName(name)
 	field.SetInt(int64(value))
 }
-
+func SetRectAttrStr(r *Rect, name string, value string) {
+	var v = reflect.ValueOf(r)
+	var field = v.Elem().FieldByName(name)
+	field.SetString((value))
+}
 // 结构体也是值类型，也必须通过指针类型来修改。
 func main() {
-	var r = Rect{50, 100}
+	var r = Rect{50, 100,"king"}
 	SetRectAttr(&r, "Width", 100) // 修改属性的接口
 	SetRectAttr(&r, "Height", 200)
-	SetRectAttr(&r, "Name", "正方形")
+	SetRectAttrStr(&r, "Name", "smith")
 	fmt.Println(r)
 }
